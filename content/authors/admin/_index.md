@@ -69,22 +69,15 @@ education:
 
 
 work:
-  - position: Senior AI Research Scientist
-    company_name: Meta AI
+  - position: Research Assistant
+    company_name: DUT
     company_url: 'https://ai.meta.com/'
     company_logo: ''
-    date_start: 2020-01-01
-    date_end: ''
+    date_start: 2025-09-01
+    date_end: 'now'
     summary: |2-
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models. 50+ citations in 3 years.
-  - position: AI Research Intern
-    company_name: OpenAI
-    company_url: 'https://openai.com/'
-    company_logo: ''
-    date_start: 2019-06-01
-    date_end: 2019-12-31
-    summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      Focusing on video generation and video understanding.
+
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -107,23 +100,23 @@ skills:
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking in the Rockies
+      - name: Hiking in Dalian
         description: ''
         percent: 80
         icon: person-simple-walk
-      - name: Building Custom PCs
+      - name: League of legends
         description: ''
         percent: 90
         icon: cpu-chip
-      - name: Sci-Fi Reading
+      - name: Rap
         description: ''
         percent: 70
         icon: book-open
 
 languages:
-  - name: English
+  - name: Chinese
     percent: 100
-  - name: Spanish
+  - name: English
     percent: 50
 
 # Awards.
@@ -154,4 +147,4 @@ awards:
       Recognized for contributions to scaling laws in deep learning.
 ---
 
-Alex Johnson is a Senior AI Research Scientist at Meta AI, where he leads groundbreaking work on large language models and multimodal systems. His research has been published in top conferences like NeurIPS and ICML, with over 10,000 citations. Alex is passionate about pushing the boundaries of AI while ensuring ethical development. Outside of work, he enjoys hiking in the Rockies, building custom PCs, and mentoring the next generation of AI talent.
+Zexi Wu is a Research Assistant at DUT, where work on computer vision.
