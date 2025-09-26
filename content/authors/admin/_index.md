@@ -3,7 +3,7 @@
 title: Zexi Wu（吴泽茜）
 
 # Name pronunciation (optional)
-name_pronunciation: 'wú zéxī'
+name_pronunciation: "wú zéxī"
 
 # Full name (for SEO)
 first_name: Zexi
@@ -34,7 +34,7 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'wuy095202@gmail.com'
+    url: "wuy095202@gmail.com"
     label: E-mail Me
   - icon: brands/x
     url: https://twitter.com/AlexAIResearch
@@ -53,43 +53,28 @@ interests:
   - Multimodel LLM
 
 education:
-  - area: PhD Computer Science (AI Focus)
-    institution: Stanford University
-    date_start: 2015-09-01
-    date_end: 2019-06-30
+  - area: Second BS Computer Science
+    institution: Dalian University of Technology
+    date_start: 2023-09-01
+    date_end: 2015-06-30
     summary: |
-      Thesis on _Scaling Laws for Neural Language Models_. Supervised by Prof. Andrew Ng. Published 5 papers in NeurIPS and ICML, with 2 best paper awards.
-    button:
-      text: 'Read Thesis'
-      url: 'https://example.com/thesis.pdf'
-  - area: MS Computer Science
-    institution: Carnegie Mellon University
-    date_start: 2013-09-01
-    date_end: 2015-05-31
+      GPA: 3.4/4.0
+  - area: BS Food Science and Engineering
+    institution: Dalian University of Technology
+    date_start: 2019-09-01
+    date_end: 2023-06-30
     summary: |
-      GPA: 4.0/4.0
-
-      Specialized in machine learning and robotics.
-  - area: BS Computer Science
-    institution: MIT
-    date_start: 2009-09-01
-    date_end: 2013-05-31
-    summary: |
-      GPA: 3.9/4.0
-
-      Minored in Mathematics. President of AI Club.
-
+      GPA: 3.2/4.0
 
 work:
   - position: Research Assistant
     company_name: DUT
-    company_url: 'https://ai.meta.com/'
-    company_logo: ''
+    company_url: "https://ai.meta.com/"
+    company_logo: ""
     date_start: 2025-09-01
     date_end: present
     summary: |2-
       Focusing on video generation and video understanding.
-
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -97,31 +82,31 @@ skills:
   - name: Technical Skills
     items:
       - name: Python & PyTorch
-        description: ''
+        description: ""
         percent: 95
         icon: code-bracket
       - name: Machine Learning
-        description: ''
+        description: ""
         percent: 100
         icon: chart-bar
       - name: Cloud Computing (AWS/GCP)
-        description: ''
+        description: ""
         percent: 85
         icon: cloud
   - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
+    color: "#eeac02"
+    color_border: "#f0bf23"
     items:
       - name: Hiking in Dalian
-        description: ''
+        description: ""
         percent: 80
         icon: person-simple-walk
       - name: League of legends
-        description: ''
+        description: ""
         percent: 90
         icon: cpu-chip
       - name: Rap
-        description: ''
+        description: ""
         percent: 70
         icon: book-open
 
@@ -138,21 +123,21 @@ languages:
 awards:
   - title: Best Paper Award
     url: https://neurips.cc/
-    date: '2022-12-01'
+    date: "2022-12-01"
     awarder: NeurIPS
     icon: hero/trophy
     summary: |
       Awarded for groundbreaking work on efficient training of large models.
   - title: AI Innovation Grant
     url: https://www.nsf.gov/
-    date: '2021-06-15'
+    date: "2021-06-15"
     awarder: National Science Foundation
     icon: hero/currency-dollar
     summary: |
       $500,000 grant for research in ethical AI development.
   - title: Outstanding PhD Thesis
     url: https://www.stanford.edu/
-    date: '2019-06-30'
+    date: "2019-06-30"
     awarder: Stanford University
     icon: hero/academic-cap
     summary: |
@@ -160,3 +145,4 @@ awards:
 ---
 
 Zexi Wu is a Research Assistant at DUT, where work on computer vision.
+
