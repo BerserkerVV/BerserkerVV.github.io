@@ -73,7 +73,7 @@ work:
     company_url: 'https://ai.meta.com/'
     company_logo: ''
     date_start: 2025-09-01
-    date_end: 'now'
+    date_end: present
     summary: |2-
       Focusing on video generation and video understanding.
 
