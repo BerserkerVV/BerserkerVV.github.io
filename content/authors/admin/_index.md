@@ -59,7 +59,6 @@ education:
     date_end: 2015-06-31
     summary: |
       GPA: 3.4/4.0
-
   - area: BS Food Science and Engineering
     institution: Dalian University of Technology
     date_start: 2019-09-01
