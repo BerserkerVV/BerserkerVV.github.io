@@ -3,11 +3,11 @@
 title: Zexi Wu（吴泽茜）
 
 # Name pronunciation (optional)
-name_pronunciation: ''
+name_pronunciation: 'wú zéxī'
 
 # Full name (for SEO)
-first_name: Alex
-last_name: Johnson
+first_name: Zexi
+last_name: Wu
 
 # Pronouns (optional)
 pronouns: he/him
@@ -23,35 +23,34 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Senior AI Research Scientist
+role: Research assistant
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Meta AI
-    url: https://ai.meta.com/
+  - name: Dalian university of technology
+    url: https://en.dlut.edu.cn/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:alex.johnson@meta.com'
+    url: 'wuy095202@gmail.com'
     label: E-mail Me
   - icon: brands/x
     url: https://twitter.com/AlexAIResearch
   - icon: brands/github
-    url: https://github.com/alexjohnsonai
+    url: https://github.com/BerserkerVV/
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/alexjohnsonai/
+    url: https://www.linkedin.com/in/%E4%B8%80%E7%95%AA-%E5%90%B4-749657291/
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=alexjohnson
+    url: https://scholar.google.com/citations?user=XBskesMAAAAJ&hl=zh-CN
   - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
+    url: https://orcid.org/0009-0009-8160-0553
 
 interests:
-  - Large Language Models
+  - GenAI
   - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
+  - Multimodel LLM
 
 education:
   - area: PhD Computer Science (AI Focus)
@@ -72,7 +71,7 @@ education:
 
       Specialized in machine learning and robotics.
   - area: BS Computer Science
-    institution: MIT
+    institution: Dalian University of Technology
     date_start: 2009-09-01
     date_end: 2013-05-31
     summary: |
