@@ -60,9 +60,6 @@ education:
     summary: |
       GPA: 3.4/4.0
 
-      
-
-      Minored in Mathematics. President of AI Club.
   - area: BS Food Science and Engineering
     institution: Dalian University of Technology
     date_start: 2019-09-01
