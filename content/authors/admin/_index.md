@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Zexi Wu（吴泽茜）
+title: 吴泽茜
 
 # Name pronunciation (optional)
 name_pronunciation: "wú zéxī"
