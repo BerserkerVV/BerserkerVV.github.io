@@ -23,11 +23,11 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Research assistant
+role: First-year Master's Student
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Dalian university of technology
+  - name: University of Macau
     url: https://en.dlut.edu.cn/
 
 # Social network links
@@ -50,16 +50,24 @@ profiles:
 interests:
   - GenAI
   - Computer Vision
-  - Multimodel LLM
+  - World Model
 
 education:
-  - area: Second BS Computer Science
+  - area: MSc in Computer Science
+    institution: University of Macau
+    date_start: 2026-08-01
+    date_end: 2028-06-30
+    summary: |
+      Master’s student in Computer Science.
+
+  - area: Second BS in Computer Science
     institution: Dalian University of Technology
     date_start: 2023-09-01
-    date_end: 2015-06-30
+    date_end: 2025-06-30
     summary: |
       GPA: 3.4/4.0
-  - area: BS Food Science and Engineering
+
+  - area: BS in Food Science and Engineering
     institution: Dalian University of Technology
     date_start: 2019-09-01
     date_end: 2023-06-30
@@ -67,14 +75,14 @@ education:
       GPA: 3.2/4.0
 
 work:
-  - position: Research Assistant
-    company_name: DUT
+  - position: Research Intern
+    company_name: LibLibAI
     company_url: "https://ai.meta.com/"
     company_logo: ""
-    date_start: 2025-09-01
+    date_start: 2025-12-01
     date_end: 2026-06-30
     summary: |2-
-      Focusing on video generation and video understanding.
+      Focusing on video generation.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -114,7 +122,7 @@ languages:
   - name: Chinese
     percent: 100
   - name: English
-    percent: 50
+    percent: 90
 
 # Awards.
 #   Add/remove as many awards below as you like.
@@ -144,5 +152,5 @@ awards:
       Recognized for contributions to scaling laws in deep learning.
 ---
 
-Zexi Wu is a Research Assistant at DUT, where work on computer vision.
+Zexi Wu is a Master student at UM, where work on computer vision.
 

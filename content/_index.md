@@ -34,11 +34,7 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
-
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
-
-        Please reach out to collaborate 😃
+        I am a Master's student in Computer Science at the University of Macau, advised by Prof. Jianbing Shen. Prior to this, I received my bachelor's degrees in Computer Science and Food Science and Engineering from Dalian University of Technology, where I was advised by Prof. Hongming Xu. My research interests focus on building artificial intelligence systems that can generate and understand the world.😃
     design:
       columns: '1'
   - block: collection
