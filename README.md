@@ -1,4 +1,4 @@
-# [The Academic CV That Gets You Hired](https://github.com/HugoBlox/theme-academic-cv)
+<!-- # [The Academic CV That Gets You Hired](https://github.com/HugoBlox/theme-academic-cv)
 
 [![Screenshot](.github/preview.webp)](https://hugoblox.com/templates/academic-cv/start/?utm_source=github&utm_medium=readme)
 
@@ -57,7 +57,7 @@ Ready to take your career to the next level? Our Pro templates offer exclusive d
   <img src="" alt="Free vs Pro templates">
 </p>-->
 
-| Feature              | Academic CV (Free)       | Academic CV Pro & Resumé Pro     |
+<!-- | Feature              | Academic CV (Free)       | Academic CV Pro & Resumé Pro     |
 | -------------------- | ------------------------ | -------------------------------- |
 | **Design**           | Professional & clean     | **Exclusive premium designs**    |
 | **Layouts**          | Standard resumé sections | **Advanced layouts & timelines** |
@@ -116,9 +116,9 @@ Join thousands of creators in our vibrant community to ask questions, share your
 - 🐦 <a href="https://x.com/BuildLore">X / Twitter</a>
 - ⭐ <a href="https://github.com/HugoBlox/hugo-blox-builder">Star on GitHub</a>
 
----
+--- --> -->
 
-MIT © 2016-Present [George Cushen](https://georgecushen.com)
+
 
 <!--START_SECTION:news-->
 <!--END_SECTION:news-->
