@@ -53,7 +53,7 @@ interests:
   - World Model
 
 education:
-  - area: MSc in Computer Science
+  - area: Master in Computer Science
     institution: University of Macau
     date_start: 2026-08-01
     date_end: 2028-06-30
