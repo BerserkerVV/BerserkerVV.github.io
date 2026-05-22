@@ -11,6 +11,9 @@
   --gold: #ffcc66;
   --rose: #ff7f8f;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+  --font-body: "Sora", "Segoe UI", sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-mono: "JetBrains Mono", "Consolas", monospace;
   --pointer-x: 50vw;
   --pointer-y: 18vh;
   --scroll-progress: 0%;
@@ -26,7 +29,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-family: var(--font-body);
   color: var(--text);
   background:
     linear-gradient(135deg, rgba(87, 215, 255, 0.13), transparent 34%),
@@ -182,6 +185,7 @@ img {
 .project-spotlight,
 .project-hero,
 .project-frame,
+.featured-paper,
 .paper-card,
 .signal-card,
 .timeline-item,
@@ -255,9 +259,9 @@ img {
 .hero h1,
 .project-hero h1 {
   margin: 0 0 14px;
-  font-family: "Instrument Serif", Georgia, serif;
+  font-family: var(--font-display);
   font-size: 86px;
-  font-weight: 400;
+  font-weight: 650;
   line-height: 0.92;
 }
 
@@ -384,7 +388,8 @@ img {
 }
 
 section {
-  padding: 24px 0;
+  padding: 34px 0;
+  scroll-margin-top: 96px;
 }
 
 .section-head {
@@ -397,9 +402,9 @@ section {
 
 .section-head h2 {
   margin: 0;
-  font-family: "Instrument Serif", Georgia, serif;
+  font-family: var(--font-display);
   font-size: 48px;
-  font-weight: 400;
+  font-weight: 650;
 }
 
 .section-head p {
@@ -434,6 +439,120 @@ section {
 .timeline-item,
 .metric-card {
   padding: 22px;
+}
+
+.research-section .section-head,
+.publication-section .section-head,
+.experience-section .section-head {
+  padding: 0 0 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.research-section .eyebrow {
+  color: var(--cyan);
+}
+
+.publication-section .eyebrow,
+.paper-venue {
+  color: var(--gold);
+}
+
+.experience-section .eyebrow {
+  color: var(--mint);
+}
+
+.signal-card {
+  border-left: 3px solid rgba(87, 215, 255, 0.78);
+  background:
+    linear-gradient(180deg, rgba(87, 215, 255, 0.08), transparent 72%),
+    var(--panel);
+}
+
+.publication-section {
+  position: relative;
+}
+
+.featured-paper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.86fr);
+  gap: 24px;
+  padding: 24px;
+  border-color: rgba(255, 204, 102, 0.24);
+  background:
+    linear-gradient(135deg, rgba(255, 204, 102, 0.12), rgba(255, 127, 143, 0.075), rgba(87, 215, 255, 0.06)),
+    var(--panel);
+}
+
+.paper-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.paper-venue {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.featured-paper h3 {
+  max-width: 760px;
+  margin: 14px 0 12px;
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.04;
+}
+
+.featured-paper p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.paper-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.paper-meta-grid span {
+  min-height: 78px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: var(--muted);
+  background: rgba(0, 0, 0, 0.14);
+}
+
+.paper-meta-grid strong {
+  display: block;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 15px;
+}
+
+.paper-visual {
+  display: grid;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.paper-visual img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.timeline-item {
+  border-left: 3px solid rgba(110, 240, 181, 0.76);
+  background:
+    linear-gradient(90deg, rgba(110, 240, 181, 0.075), transparent 68%),
+    var(--panel);
 }
 
 .signal-card .index,
@@ -497,9 +616,9 @@ section {
 
 .project-copy h2 {
   margin: 0 0 12px;
-  font-family: "Instrument Serif", Georgia, serif;
+  font-family: var(--font-display);
   font-size: 54px;
-  font-weight: 400;
+  font-weight: 650;
 }
 
 .project-tagline {
@@ -524,9 +643,9 @@ section {
 
 .control-copy h2 {
   margin: 0 0 10px;
-  font-family: "Instrument Serif", Georgia, serif;
+  font-family: var(--font-display);
   font-size: 42px;
-  font-weight: 400;
+  font-weight: 650;
 }
 
 .control-copy p {
@@ -652,7 +771,7 @@ pre.mono {
 }
 
 .mono {
-  font-family: "IBM Plex Mono", "Consolas", monospace;
+  font-family: var(--font-mono);
 }
 
 [data-reveal] {
@@ -700,6 +819,7 @@ pre.mono {
   .hero-grid,
   .project-spotlight,
   .project-hero,
+  .featured-paper,
   .control-lab,
   .signal-grid,
   .papers-grid,
@@ -734,6 +854,14 @@ pre.mono {
     font-size: 38px;
   }
 
+  .featured-paper h3 {
+    font-size: 32px;
+  }
+
+  .paper-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
   .control-stage {
     grid-template-columns: 1fr;
   }
@@ -760,6 +888,14 @@ pre.mono {
   .button-primary,
   .button-secondary {
     width: 100%;
+  }
+
+  .featured-paper {
+    padding: 18px;
+  }
+
+  .featured-paper h3 {
+    font-size: 28px;
   }
 
   .console-row {

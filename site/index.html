@@ -7,7 +7,7 @@
     <meta name="description" content="Zexi Wu is a computer vision researcher working on generative video models, semantic control, LoRA adaptation, and world models.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..800,25&family=JetBrains+Mono:wght@400;600&family=Sora:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
     <script src="/app.js" defer></script>
   </head>
@@ -22,7 +22,6 @@
         <nav class="site-nav">
           <a href="#research">Research</a>
           <a href="#publications">Publications</a>
-          <a href="#video2lora">Video2LoRA</a>
           <a href="#experience">Experience</a>
         </nav>
       </div>
@@ -76,7 +75,7 @@
         </div>
       </section>
 
-      <section id="research">
+      <section id="research" class="research-section">
         <div class="section-head">
           <div>
             <div class="eyebrow">Research Signal</div>
@@ -103,77 +102,37 @@
         </div>
       </section>
 
-      <section id="publications">
+      <section id="publications" class="publication-section">
         <div class="section-head">
           <div>
             <div class="eyebrow">Publications</div>
             <h2>Selected work</h2>
           </div>
-          <p>Current work at the intersection of video diffusion, semantic control, and parameter-efficient generation.</p>
+          <p>Peer-reviewed and preprint work. The project page lives inside this publication entry, instead of being a parallel homepage category.</p>
         </div>
-        <div class="papers-grid">
-          <article class="paper-card tilt-card" data-reveal>
-            <div class="eyebrow">CVPR 2026 Findings</div>
+        <article class="featured-paper tilt-card" data-reveal>
+          <div class="paper-copy">
+            <div class="paper-venue">CVPR 2026 Findings</div>
             <h3>Video2LoRA: Unified Semantic-Controlled Video Generation via Per-Reference-Video LoRA</h3>
-            <p>A HyperNetwork predicts lightweight semantic LoRA adapters from each reference video for unified controllable video generation.</p>
-            <div class="paper-links">
-              <a href="https://arxiv.org/abs/2603.08210">Paper</a>
-              <a href="/projects/video2lora/">Project Page</a>
-              <a href="https://github.com/BerserkerVV/Video2LoRA">Code</a>
+            <p>A transformer HyperNetwork predicts a dedicated semantic LoRA from a reference video, enabling zero-shot control without per-condition fine-tuning.</p>
+            <div class="paper-meta-grid" aria-label="Video2LoRA highlights">
+              <span><strong>&lt;50KB</strong> per semantic condition</span>
+              <span><strong>&lt;150MB</strong> final model footprint</span>
+              <span><strong>Zero-shot</strong> unseen semantic controls</span>
             </div>
-          </article>
-          <article class="paper-card tilt-card" data-reveal>
-            <div class="eyebrow">Research Direction</div>
-            <h3>Generative video models that stay flexible under new semantics</h3>
-            <p>My broader direction is to build AI systems that can generate and understand the world through compact, reusable, semantically grounded adaptations.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="video2lora">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Project Spotlight</div>
-            <h2>Video2LoRA</h2>
-          </div>
-          <p>Unified semantic-controlled video generation via per-reference-video LoRA.</p>
-        </div>
-        <div class="project-spotlight tilt-card" data-reveal>
-          <div class="project-copy">
-            <p class="project-tagline">A transformer HyperNetwork predicts a dedicated semantic LoRA from a reference video, enabling zero-shot control without per-condition fine-tuning.</p>
-            <p>Video2LoRA reframes semantic video control as per-reference-video adaptation: instead of training or storing separate heavy condition-specific modules, it predicts compact LoRA weights that plug into a frozen diffusion backbone.</p>
             <div class="project-actions">
               <a class="button-primary" href="/projects/video2lora/">Open project page</a>
-              <a class="button-secondary" href="https://arxiv.org/pdf/2603.08210">Read paper</a>
+              <a class="button-secondary" href="https://arxiv.org/abs/2603.08210">Paper</a>
+              <a class="button-secondary" href="https://github.com/BerserkerVV/Video2LoRA">Code</a>
             </div>
           </div>
-          <div class="project-frame">
+          <div class="paper-visual">
             <img src="/assets/video2lora-teaser.jpg" alt="Video2LoRA teaser">
           </div>
-        </div>
+        </article>
       </section>
 
-      <section>
-        <div class="metric-grid">
-          <article class="metric-card tilt-card" data-reveal>
-            <div class="index mono">&lt;50KB</div>
-            <h3>Per semantic condition</h3>
-            <p>Ultra-compact semantic-specific LoRA parameters instead of a new heavyweight model branch.</p>
-          </article>
-          <article class="metric-card tilt-card" data-reveal>
-            <div class="index mono">&lt;150MB</div>
-            <h3>Final model footprint</h3>
-            <p>Efficient enough for storage and deployment without losing semantic flexibility.</p>
-          </article>
-          <article class="metric-card tilt-card" data-reveal>
-            <div class="index mono">Zero-shot</div>
-            <h3>Unseen semantics</h3>
-            <p>Generalizes to unseen semantic controls through reference-video conditioning.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="experience">
+      <section id="experience" class="experience-section">
         <div class="section-head">
           <div>
             <div class="eyebrow">Experience</div>
