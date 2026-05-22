@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
   </head>
-  <body>
+  <body data-page="project">
+    <div class="site-glow" aria-hidden="true"></div>
     <header class="site-header">
       <div class="page-shell">
         <a class="brand" href="/">
@@ -27,7 +29,7 @@
 
     <main class="page-shell">
       <section class="hero">
-        <div class="project-hero">
+        <div class="project-hero tilt-card" data-reveal>
           <div class="project-copy">
             <div class="eyebrow">CVPR 2026 Findings</div>
             <h1>Video2LoRA</h1>
@@ -36,6 +38,7 @@
             <div class="project-actions">
               <a class="button-primary" href="https://arxiv.org/abs/2603.08210">Paper</a>
               <a class="button-secondary" href="https://github.com/BerserkerVV/Video2LoRA">Code</a>
+              <a class="button-secondary" href="#citation">Cite</a>
             </div>
           </div>
           <div class="project-metrics">
@@ -56,7 +59,7 @@
       </section>
 
       <section>
-        <div class="project-frame">
+        <div class="project-frame tilt-card" data-reveal>
           <img src="/assets/video2lora-teaser.jpg" alt="Video2LoRA teaser">
         </div>
       </section>
@@ -72,24 +75,49 @@
       </section>
 
       <section>
-        <div class="project-frame">
+        <div class="control-lab tilt-card" data-reveal>
+          <div class="control-copy">
+            <div class="eyebrow">Interactive System Map</div>
+            <h2 id="lab-title">Reference Video</h2>
+            <p id="lab-copy">A short reference clip provides the semantic cue: motion, style, camera behavior, or visual effect.</p>
+          </div>
+          <div class="control-stage" aria-hidden="true">
+            <span class="flow-node active">Reference</span>
+            <span class="flow-line"></span>
+            <span class="flow-node">HyperNetwork</span>
+            <span class="flow-line"></span>
+            <span class="flow-node">LightLoRA</span>
+            <span class="flow-line"></span>
+            <span class="flow-node">Video</span>
+          </div>
+          <div class="control-tabs" role="tablist" aria-label="Video2LoRA system map">
+            <button class="control-tab is-active" type="button" data-lab="reference">Reference</button>
+            <button class="control-tab" type="button" data-lab="hypernetwork">HyperNetwork</button>
+            <button class="control-tab" type="button" data-lab="lightlora">LightLoRA</button>
+            <button class="control-tab" type="button" data-lab="backbone">Backbone</button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="project-frame tilt-card" data-reveal>
           <img src="/assets/video2lora-framework.png" alt="Video2LoRA framework diagram">
         </div>
       </section>
 
       <section>
         <div class="metric-grid">
-          <article class="metric-card">
+          <article class="metric-card tilt-card" data-reveal>
             <div class="index">01</div>
             <h3>LightLoRA Representation</h3>
             <p>Compact LoRA factors reduce per-condition parameter footprint while keeping semantic adaptability.</p>
           </article>
-          <article class="metric-card">
+          <article class="metric-card tilt-card" data-reveal>
             <div class="index">02</div>
             <h3>HyperNetwork Prediction</h3>
             <p>A transformer-based HyperNetwork consumes reference-video features and predicts semantic-specific LoRA weights.</p>
           </article>
-          <article class="metric-card">
+          <article class="metric-card tilt-card" data-reveal>
             <div class="index">03</div>
             <h3>Frozen Diffusion Backbone</h3>
             <p>The predicted adapters plug into a frozen video diffusion model, avoiding per-condition fine-tuning.</p>
@@ -97,7 +125,7 @@
         </div>
       </section>
 
-      <section>
+      <section id="citation">
         <div class="section-head">
           <div>
             <div class="eyebrow">Citation</div>
@@ -105,8 +133,20 @@
           </div>
         </div>
         <div class="section-panel">
-          <div class="paper-card">
-            <p class="mono">@misc{wu2026video2loraunifiedsemanticcontrolledvideo,<br>title={Video2LoRA: Unified Semantic-Controlled Video Generation via Per-Reference-Video LoRA},<br>author={Wu, Zexi and Li, Baolu and Dai, Jing and Zhang, Yiming and Ma, Yue and Wang, Qinghe and Jia, Xu and Xu, Hongming},<br>year={2026},<br>eprint={2603.08210},<br>archivePrefix={arXiv},<br>primaryClass={cs.CV},<br>url={https://arxiv.org/abs/2603.08210}<br>}</p>
+          <div class="paper-card tilt-card" data-reveal>
+            <div class="citation-head">
+              <span class="mono">BibTeX</span>
+              <button class="button-secondary copy-button" type="button" data-copy-target="bibtex-code">Copy</button>
+            </div>
+            <pre id="bibtex-code" class="mono">@misc{wu2026video2loraunifiedsemanticcontrolledvideo,
+title={Video2LoRA: Unified Semantic-Controlled Video Generation via Per-Reference-Video LoRA},
+author={Wu, Zexi and Li, Baolu and Dai, Jing and Zhang, Yiming and Ma, Yue and Wang, Qinghe and Jia, Xu and Xu, Hongming},
+year={2026},
+eprint={2603.08210},
+archivePrefix={arXiv},
+primaryClass={cs.CV},
+url={https://arxiv.org/abs/2603.08210}
+}</pre>
           </div>
         </div>
       </section>
