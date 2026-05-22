@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zexi Wu</title>
+    <meta name="description" content="Zexi Wu is a computer vision researcher working on generative video models, semantic control, LoRA adaptation, and world models.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="page-shell">
+        <a class="brand" href="/">
+          <span class="brand-mark">ZW</span>
+          <span>Zexi Wu</span>
+        </a>
+        <nav class="site-nav">
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#video2lora">Video2LoRA</a>
+          <a href="#experience">Experience</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">University of Macau · Generative Video Research</div>
+            <h1>Zexi Wu</h1>
+            <p>I build generative video systems that can follow semantic references, adapt efficiently, and reason about motion in the world. My current work focuses on semantic-controlled video generation, LoRA personalization, and world-facing AI systems.</p>
+            <div class="hero-actions">
+              <a class="button-primary" href="/projects/video2lora/">View Video2LoRA</a>
+              <a class="button-secondary" href="/uploads/resume.pdf">Download CV</a>
+              <a class="button-secondary" href="mailto:wuy095202@gmail.com">Email</a>
+            </div>
+          </div>
+          <aside class="hero-side">
+            <img src="/assets/avatar.png" alt="Portrait of Zexi Wu">
+            <div class="meta-list">
+              <div class="meta-item">
+                <strong>Research Themes</strong>
+                Generative AI, computer vision, video generation, world models.
+              </div>
+              <div class="meta-item">
+                <strong>Affiliation</strong>
+                Master’s student in Computer Science at the University of Macau, advised by Prof. Jianbing Shen.
+              </div>
+              <div class="meta-item">
+                <strong>Links</strong>
+                <div class="inline-links">
+                  <a href="https://github.com/BerserkerVV/">GitHub</a>
+                  <a href="https://scholar.google.com/citations?user=XBskesMAAAAJ&hl=zh-CN">Scholar</a>
+                  <a href="https://orcid.org/0009-0009-8160-0553">ORCID</a>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="research">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Research Signal</div>
+            <h2>What I work on</h2>
+          </div>
+          <p>Building controllable video models that stay semantically aligned, lightweight, and useful outside narrow single-condition setups.</p>
+        </div>
+        <div class="signal-grid">
+          <article class="signal-card">
+            <div class="index">01</div>
+            <h3>Semantic-Controlled Generation</h3>
+            <p>Turning reference motion, style, camera cues, and visual effects into controllable generation signals for video diffusion systems.</p>
+          </article>
+          <article class="signal-card">
+            <div class="index">02</div>
+            <h3>Efficient Adaptation</h3>
+            <p>Exploring LoRA, hypernetworks, and compact parameterizations that make personalization lightweight enough to deploy.</p>
+          </article>
+          <article class="signal-card">
+            <div class="index">03</div>
+            <h3>World Understanding</h3>
+            <p>Pushing toward AI systems that understand dynamic scenes, temporal consistency, and high-level intent instead of isolated frames.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="publications">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Publications</div>
+            <h2>Selected work</h2>
+          </div>
+          <p>Current work at the intersection of video diffusion, semantic control, and parameter-efficient generation.</p>
+        </div>
+        <div class="papers-grid">
+          <article class="paper-card">
+            <div class="eyebrow">CVPR 2026 Findings</div>
+            <h3>Video2LoRA: Unified Semantic-Controlled Video Generation via Per-Reference-Video LoRA</h3>
+            <p>A HyperNetwork predicts lightweight semantic LoRA adapters from each reference video for unified controllable video generation.</p>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2603.08210">Paper</a>
+              <a href="/projects/video2lora/">Project Page</a>
+              <a href="https://github.com/BerserkerVV/Video2LoRA">Code</a>
+            </div>
+          </article>
+          <article class="paper-card">
+            <div class="eyebrow">Research Direction</div>
+            <h3>Generative video models that stay flexible under new semantics</h3>
+            <p>My broader direction is to build AI systems that can generate and understand the world through compact, reusable, semantically grounded adaptations.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="video2lora">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Project Spotlight</div>
+            <h2>Video2LoRA</h2>
+          </div>
+          <p>Unified semantic-controlled video generation via per-reference-video LoRA.</p>
+        </div>
+        <div class="project-spotlight">
+          <div class="project-copy">
+            <p class="project-tagline">A transformer HyperNetwork predicts a dedicated semantic LoRA from a reference video, enabling zero-shot control without per-condition fine-tuning.</p>
+            <p>Video2LoRA reframes semantic video control as per-reference-video adaptation: instead of training or storing separate heavy condition-specific modules, it predicts compact LoRA weights that plug into a frozen diffusion backbone.</p>
+            <div class="project-actions">
+              <a class="button-primary" href="/projects/video2lora/">Open project page</a>
+              <a class="button-secondary" href="https://arxiv.org/pdf/2603.08210">Read paper</a>
+            </div>
+          </div>
+          <div class="project-frame">
+            <img src="/assets/video2lora-teaser.jpg" alt="Video2LoRA teaser">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="metric-grid">
+          <article class="metric-card">
+            <div class="index mono">&lt;50KB</div>
+            <h3>Per semantic condition</h3>
+            <p>Ultra-compact semantic-specific LoRA parameters instead of a new heavyweight model branch.</p>
+          </article>
+          <article class="metric-card">
+            <div class="index mono">&lt;150MB</div>
+            <h3>Final model footprint</h3>
+            <p>Efficient enough for storage and deployment without losing semantic flexibility.</p>
+          </article>
+          <article class="metric-card">
+            <div class="index mono">Zero-shot</div>
+            <h3>Unseen semantics</h3>
+            <p>Generalizes to unseen semantic controls through reference-video conditioning.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Experience</div>
+            <h2>Training and background</h2>
+          </div>
+        </div>
+        <div class="experience-grid">
+          <article class="timeline-item">
+            <div class="timeline-meta">2026 – 2028</div>
+            <h3>University of Macau</h3>
+            <p>Master in Computer Science.</p>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-meta">2025 – 2026</div>
+            <h3>LibLibAI · Research Intern</h3>
+            <p>Working on video generation systems and controllable generative modeling.</p>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-meta">2023 – 2025</div>
+            <h3>Dalian University of Technology</h3>
+            <p>Second BS in Computer Science.</p>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-meta">2019 – 2023</div>
+            <h3>Dalian University of Technology</h3>
+            <p>BS in Food Science and Engineering.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell">
+        <p>© 2026 Zexi Wu</p>
+        <p class="mono">berserkervv.github.io</p>
+      </div>
+    </footer>
+  </body>
+</html>

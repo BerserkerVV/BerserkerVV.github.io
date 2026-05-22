@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video2LoRA · Zexi Wu</title>
+    <meta name="description" content="Video2LoRA project page for unified semantic-controlled video generation via per-reference-video LoRA.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="page-shell">
+        <a class="brand" href="/">
+          <span class="brand-mark">ZW</span>
+          <span>Zexi Wu</span>
+        </a>
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="https://arxiv.org/abs/2603.08210">Paper</a>
+          <a href="https://github.com/BerserkerVV/Video2LoRA">Code</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero">
+        <div class="project-hero">
+          <div class="project-copy">
+            <div class="eyebrow">CVPR 2026 Findings</div>
+            <h1>Video2LoRA</h1>
+            <p class="project-tagline">Unified semantic-controlled video generation via per-reference-video LoRA.</p>
+            <p>Video2LoRA predicts a dedicated semantic LoRA from a reference video, making controllable video generation more flexible, compact, and zero-shot friendly.</p>
+            <div class="project-actions">
+              <a class="button-primary" href="https://arxiv.org/abs/2603.08210">Paper</a>
+              <a class="button-secondary" href="https://github.com/BerserkerVV/Video2LoRA">Code</a>
+            </div>
+          </div>
+          <div class="project-metrics">
+            <div class="project-metric">
+              <strong>&lt;50KB</strong>
+              LoRA parameters per semantic condition
+            </div>
+            <div class="project-metric">
+              <strong>&lt;150MB</strong>
+              Final model size
+            </div>
+            <div class="project-metric">
+              <strong>Zero-shot</strong>
+              Generalization to unseen semantics
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="project-frame">
+          <img src="/assets/video2lora-teaser.jpg" alt="Video2LoRA teaser">
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Why it matters</div>
+            <h2>A more flexible route to video control</h2>
+          </div>
+          <p>Semantic alignment across diverse video generation conditions is hard. Explicit structural guidance can become rigid, while per-condition models are difficult to reuse. Video2LoRA treats the reference video as the semantic source and predicts compact LoRA weights that adapt a frozen diffusion backbone.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="project-frame">
+          <img src="/assets/video2lora-framework.png" alt="Video2LoRA framework diagram">
+        </div>
+      </section>
+
+      <section>
+        <div class="metric-grid">
+          <article class="metric-card">
+            <div class="index">01</div>
+            <h3>LightLoRA Representation</h3>
+            <p>Compact LoRA factors reduce per-condition parameter footprint while keeping semantic adaptability.</p>
+          </article>
+          <article class="metric-card">
+            <div class="index">02</div>
+            <h3>HyperNetwork Prediction</h3>
+            <p>A transformer-based HyperNetwork consumes reference-video features and predicts semantic-specific LoRA weights.</p>
+          </article>
+          <article class="metric-card">
+            <div class="index">03</div>
+            <h3>Frozen Diffusion Backbone</h3>
+            <p>The predicted adapters plug into a frozen video diffusion model, avoiding per-condition fine-tuning.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Citation</div>
+            <h2>BibTeX</h2>
+          </div>
+        </div>
+        <div class="section-panel">
+          <div class="paper-card">
+            <p class="mono">@misc{wu2026video2loraunifiedsemanticcontrolledvideo,<br>title={Video2LoRA: Unified Semantic-Controlled Video Generation via Per-Reference-Video LoRA},<br>author={Wu, Zexi and Li, Baolu and Dai, Jing and Zhang, Yiming and Ma, Yue and Wang, Qinghe and Jia, Xu and Xu, Hongming},<br>year={2026},<br>eprint={2603.08210},<br>archivePrefix={arXiv},<br>primaryClass={cs.CV},<br>url={https://arxiv.org/abs/2603.08210}<br>}</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell">
+        <p>Video2LoRA project page</p>
+        <p class="mono">berserkervv.github.io/projects/video2lora/</p>
+      </div>
+    </footer>
+  </body>
+</html>
