@@ -6,16 +6,16 @@
 # Appearance
 appearance:
   mode: system
-  color: indigo
+  color: cyan
 
 # SEO
 marketing:
   seo:
     site_type: Person
     local_business_type: ''
-    org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
-    twitter: 'GetResearchDev'
+    org_name: 'University of Macau'
+    description: 'Zexi Wu is a computer vision researcher working on generative video models, semantic control, LoRA adaptation, and world models.'
+    twitter: 'AlexAIResearch'
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -40,7 +40,7 @@ header:
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Zexi Wu. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false

@@ -1,28 +1,29 @@
 ---
 title: "Video2LoRA: Unified Semantic-Controlled Video Generation via Per-Reference-Video LoRA"
 authors:
-- admin
+  - admin
+  - Baolu Li
+  - Jing Dai
+  - Yiming Zhang
+  - Yue Ma
+  - Qinghe Wang
+  - Xu Jia
+  - Hongming Xu
 date: "2026-03-10T00:00:00Z"
-
-# Schedule page publish date (NOT publication's date).
 publishDate: "2026-03-10T00:00:00Z"
 
-# Publication type.
-# Accepts a single type but formatted as a YAML list (for Hugo requirements).
-# Enter a publication type from the CSL standard.
-publication_types: ["article"]
+publication_types: ["paper-conference"]
+publication: "In *CVPR 2026 Findings*"
+publication_short: "CVPR 2026 Findings"
 
-# Publication name and optional abbreviated publication name.
-publication: ""
-publication_short: ""
-
-abstract: Achieving semantic alignment across diverse video generation conditions remains a significant challenge. Methods that rely on explicit structural guidance often enforce rigid spatial constraints that limit semantic flexibility, whereas models tailored for individual control types lack interoperability and adaptability. These design bottlenecks hinder progress toward flexible and efficient semantic video generation. To address this, we propose \textbf{Video2LoRA}, a scalable and generalizable framework for semantic-controlled video generation that conditions on a reference video. Video2LoRA employs a lightweight hypernetwork to predict personalized LoRA weights for each semantic input, which are combined with auxiliary matrices to form adaptive LoRA modules integrated into a frozen diffusion backbone. This design enables the model to generate videos consistent with the reference semantics while preserving key style and content variations, eliminating the need for any per-condition training. Notably, the final model weights less than 150MB, making it highly efficient for storage and deployment. Video2LoRA achieves coherent, semantically aligned generation across diverse conditions and exhibits strong zero-shot generalization to unseen semantics.
-
-# Summary. An optional shortened abstract.
-summary: Customizing a dedicated semantic LoRA for each reference video.
+abstract: "Achieving semantic alignment across diverse video generation conditions remains a significant challenge. Methods that rely on explicit structural guidance often enforce rigid spatial constraints that limit semantic flexibility, whereas models tailored for individual control types lack interoperability and adaptability. Video2LoRA is a scalable and generalizable framework for semantic-controlled video generation conditioned on a reference video. A lightweight HyperNetwork predicts personalized LoRA weights for each semantic input, which are combined with auxiliary matrices to form adaptive LoRA modules integrated into a frozen diffusion backbone. This enables generation consistent with reference semantics while preserving style and content variation, without per-condition training."
+summary: "A HyperNetwork predicts lightweight semantic LoRA adapters from each reference video for unified controllable video generation."
 
 tags:
-- Video Generation
+  - Video Generation
+  - Semantic Control
+  - LoRA
+  - Diffusion Models
 
 featured: true
 
@@ -31,51 +32,27 @@ hugoblox:
     arxiv: 2603.08210
 
 links:
-- type: preprint
-  provider: arxiv
-  id: http://arxiv.org/abs/2603.08210
-- type: code
-  url: https://github.com/BerserkerVV/Video2LoRA
-- type: slides
-  url: https://www.slideshare.net/
-- type: dataset
-  url: "#"
-- type: poster
-  url: "#"
-- type: source
-  url: "#"
-- type: video
-  url: https://youtube.com
-- type: custom
-  label: Custom Link
-  url: http://example.org
+  - type: preprint
+    provider: arxiv
+    id: "2603.08210"
+  - type: pdf
+    url: https://arxiv.org/pdf/2603.08210
+  - type: code
+    url: https://github.com/BerserkerVV/Video2LoRA
+  - type: project
+    url: /projects/video2lora/
 
-# Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Image credit: [**Unsplash**](https://github.com/BerserkerVV/Video2LoRA/blob/main/assets/teaser.jpg)'
-  focal_point: ""
+  caption: 'Video2LoRA teaser.'
+  focal_point: "Center"
   preview_only: false
 
-# Associated Projects (optional).
-#   Associate this publication with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `internal-project` references `content/project/internal-project/index.md`.
-#   Otherwise, set `projects: []`.
 projects:
-- internal-project
+  - video2lora
 
-# Slides (optional).
-#   Associate this publication with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides: "example"` references `content/slides/example/index.md`.
-#   Otherwise, set `slides: ""`.
 slides: ""
 ---
 
-This work is driven by the results in my [previous paper](/publications/conference-paper/) on LLMs.
+Video2LoRA introduces a reference-driven route to semantic video generation: instead of training separate adapters for every condition, it predicts compact semantic LoRA weights directly from a reference video.
 
-> [!NOTE]
-> Create your slides in Markdown - click the *Slides* button to check out the example.
-
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
+The project page includes a visual overview, method breakdown, highlights, links, and BibTeX.

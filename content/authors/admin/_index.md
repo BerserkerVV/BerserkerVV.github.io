@@ -28,13 +28,13 @@ role: First-year Master's Student
 # Organizations/Affiliations to display in Biography blox
 organizations:
   - name: University of Macau
-    url: https://en.dlut.edu.cn/
+    url: https://www.um.edu.mo/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: "wuy095202@gmail.com"
+    url: "mailto:wuy095202@gmail.com"
     label: E-mail Me
   - icon: brands/x
     url: https://twitter.com/AlexAIResearch
@@ -48,9 +48,10 @@ profiles:
     url: https://orcid.org/0009-0009-8160-0553
 
 interests:
-  - GenAI
+  - Generative AI
   - Computer Vision
-  - World Model
+  - Video Generation
+  - World Models
 
 education:
   - area: Master in Computer Science
@@ -77,12 +78,12 @@ education:
 work:
   - position: Research Intern
     company_name: LibLibAI
-    company_url: "https://ai.meta.com/"
+    company_url: "https://www.liblib.art/"
     company_logo: ""
     date_start: 2025-12-01
     date_end: 2026-06-30
     summary: |2-
-      Focusing on video generation.
+      Working on video generation systems and controllable generative modeling.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -93,13 +94,13 @@ skills:
         description: ""
         percent: 95
         icon: code-bracket
-      - name: Machine Learning
+      - name: Diffusion Video Models
         description: ""
         percent: 100
         icon: chart-bar
-      - name: Cloud Computing (AWS/GCP)
+      - name: LoRA & Efficient Tuning
         description: ""
-        percent: 85
+        percent: 90
         icon: cloud
   - name: Hobbies
     color: "#eeac02"
@@ -128,29 +129,8 @@ languages:
 #   Add/remove as many awards below as you like.
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
-awards:
-  - title: Best Paper Award
-    url: https://neurips.cc/
-    date: "2022-12-01"
-    awarder: NeurIPS
-    icon: hero/trophy
-    summary: |
-      Awarded for groundbreaking work on efficient training of large models.
-  - title: AI Innovation Grant
-    url: https://www.nsf.gov/
-    date: "2021-06-15"
-    awarder: National Science Foundation
-    icon: hero/currency-dollar
-    summary: |
-      $500,000 grant for research in ethical AI development.
-  - title: Outstanding PhD Thesis
-    url: https://www.stanford.edu/
-    date: "2019-06-30"
-    awarder: Stanford University
-    icon: hero/academic-cap
-    summary: |
-      Recognized for contributions to scaling laws in deep learning.
+awards: []
 ---
 
-Zexi Wu is a Master student at UM, where work on computer vision.
+Zexi Wu is a Master's student in Computer Science at the University of Macau, advised by Prof. Jianbing Shen. His research focuses on generative video models, semantic control, efficient adaptation, and building AI systems that can generate and understand dynamic worlds.
 

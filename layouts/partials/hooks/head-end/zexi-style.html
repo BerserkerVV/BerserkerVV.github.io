@@ -1,0 +1,279 @@
+<style>
+  :root {
+    --zexi-ink: #071018;
+    --zexi-panel: #0d1722;
+    --zexi-cyan: #35d7ff;
+    --zexi-mint: #67f2b7;
+    --zexi-pink: #ff5fa2;
+    --zexi-gold: #ffd166;
+    --zexi-line: rgba(255, 255, 255, 0.14);
+  }
+
+  body {
+    letter-spacing: 0;
+  }
+
+  .navbar,
+  header.header {
+    backdrop-filter: blur(18px);
+    background: rgba(7, 16, 24, 0.78);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .navbar a,
+  header.header a {
+    letter-spacing: 0;
+  }
+
+  .zexi-hero-shell {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    color: #f7fbff;
+    background:
+      linear-gradient(135deg, rgba(53, 215, 255, 0.18), transparent 28%),
+      linear-gradient(225deg, rgba(255, 95, 162, 0.18), transparent 30%),
+      linear-gradient(180deg, #08111b 0%, #0b1420 58%, #10141c 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .zexi-hero-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.18));
+  }
+
+  .zexi-hero-shell::after {
+    content: "GENAI / VIDEO / WORLD MODELS";
+    position: absolute;
+    right: 4vw;
+    bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.08);
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    pointer-events: none;
+  }
+
+  .zexi-hero-shell h1,
+  .zexi-hero-shell h2,
+  .zexi-hero-shell h3,
+  .zexi-hero-shell p,
+  .zexi-hero-shell li,
+  .zexi-hero-shell dt,
+  .zexi-hero-shell dd {
+    color: #f7fbff;
+  }
+
+  .zexi-hero-shell img {
+    border: 2px solid rgba(103, 242, 183, 0.55);
+    box-shadow: 0 0 0 10px rgba(53, 215, 255, 0.08), 0 24px 80px rgba(0, 0, 0, 0.36);
+  }
+
+  .zexi-signal-grid,
+  .v2l-method-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .zexi-signal-grid article,
+  .v2l-method-grid article,
+  .v2l-stats div {
+    min-height: 13rem;
+    padding: 1.25rem;
+    border: 1px solid rgba(7, 16, 24, 0.12);
+    border-radius: 8px;
+    background:
+      linear-gradient(160deg, rgba(53, 215, 255, 0.08), rgba(255, 255, 255, 0.88) 38%),
+      #ffffff;
+    box-shadow: 0 18px 42px rgba(7, 16, 24, 0.08);
+  }
+
+  .zexi-signal-grid span,
+  .v2l-method-grid span,
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    height: 1.6rem;
+    color: #007c91;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  .zexi-signal-grid h3,
+  .v2l-method-grid h3 {
+    margin-top: 1.8rem;
+    margin-bottom: 0.7rem;
+    font-size: 1.12rem;
+  }
+
+  .zexi-signal-grid p,
+  .v2l-method-grid p {
+    margin: 0;
+    color: #314255;
+    line-height: 1.7;
+  }
+
+  .zexi-project-callout,
+  .v2l-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+    border-radius: 8px;
+    color: #f8fbff;
+    background:
+      linear-gradient(135deg, rgba(53, 215, 255, 0.22), transparent 34%),
+      linear-gradient(225deg, rgba(255, 209, 102, 0.18), transparent 32%),
+      #09131f;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 24px 70px rgba(7, 16, 24, 0.22);
+  }
+
+  .zexi-project-callout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(18rem, 0.6fr);
+    gap: 1.5rem;
+    align-items: end;
+  }
+
+  .zexi-project-callout h2,
+  .v2l-hero h1 {
+    margin: 0.25rem 0 0.7rem;
+    color: #ffffff;
+    font-size: 2.35rem;
+    line-height: 1.08;
+  }
+
+  .zexi-project-callout p,
+  .v2l-hero p {
+    color: rgba(248, 251, 255, 0.84);
+    line-height: 1.72;
+  }
+
+  .v2l-hero .lead {
+    color: #67f2b7;
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+
+  .zexi-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1.2rem;
+  }
+
+  .zexi-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.65rem;
+    padding: 0 1rem;
+    border-radius: 6px;
+    color: #071018;
+    background: #67f2b7;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 12px 30px rgba(103, 242, 183, 0.2);
+  }
+
+  .zexi-actions a:nth-child(2) {
+    background: #35d7ff;
+  }
+
+  .zexi-actions a:nth-child(3) {
+    background: #ffd166;
+  }
+
+  .metric-strip {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .metric-strip span {
+    display: block;
+    padding: 0.95rem;
+    border-radius: 8px;
+    color: rgba(248, 251, 255, 0.82);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .metric-strip strong {
+    display: block;
+    color: #ffffff;
+    font-size: 1.2rem;
+  }
+
+  .v2l-media-frame {
+    margin: 1.5rem 0 2rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    background: #09131f;
+    border: 1px solid rgba(7, 16, 24, 0.12);
+    box-shadow: 0 24px 70px rgba(7, 16, 24, 0.16);
+  }
+
+  .v2l-media-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+  }
+
+  .v2l-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0 2.25rem;
+  }
+
+  .v2l-stats div {
+    min-height: 8rem;
+  }
+
+  .v2l-stats strong {
+    display: block;
+    color: #09131f;
+    font-size: 1.65rem;
+    line-height: 1.15;
+  }
+
+  .v2l-stats span {
+    display: block;
+    margin-top: 0.55rem;
+    color: #405267;
+  }
+
+  @media (max-width: 900px) {
+    .zexi-signal-grid,
+    .v2l-method-grid,
+    .v2l-stats,
+    .zexi-project-callout {
+      grid-template-columns: 1fr;
+    }
+
+    .zexi-hero-shell::after {
+      display: none;
+    }
+
+    .zexi-project-callout,
+    .v2l-hero {
+      padding: 1.25rem;
+    }
+
+    .zexi-project-callout h2,
+    .v2l-hero h1 {
+      font-size: 2rem;
+    }
+  }
+</style>
