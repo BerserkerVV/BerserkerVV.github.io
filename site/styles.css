@@ -474,8 +474,6 @@ section {
 
 .featured-paper {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.86fr);
-  gap: 24px;
   padding: 24px;
   border-color: rgba(255, 204, 102, 0.24);
   background:
@@ -497,7 +495,7 @@ section {
 }
 
 .featured-paper h3 {
-  max-width: 760px;
+  max-width: 920px;
   margin: 14px 0 12px;
   font-family: var(--font-display);
   font-size: 36px;
@@ -532,20 +530,6 @@ section {
   color: var(--text);
   font-family: var(--font-mono);
   font-size: 15px;
-}
-
-.paper-visual {
-  display: grid;
-  align-items: center;
-  padding: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.18);
-}
-
-.paper-visual img {
-  width: 100%;
-  border-radius: 8px;
 }
 
 .timeline-item {
