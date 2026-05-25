@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Publications - Zexi Wu</title>
+    <meta name="description" content="Publications by Zexi Wu in generative video, semantic control, and efficient adaptation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..800,25&family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@500;700&family=Press+Start+2P&family=Sora:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body data-page="publications">
+    <div class="site-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="page-shell">
+        <a class="brand" href="/">
+          <span class="brand-mark">ZW</span>
+          <span>Zexi Wu</span>
+        </a>
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a aria-current="page" href="/publications/">Publications</a>
+          <a href="/news/">Academic News</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-hero pub-hero">
+        <div class="page-kicker">PUBLICATION DATABASE</div>
+        <h1>Publications</h1>
+        <p>Selected work at the intersection of video diffusion, semantic control, and parameter-efficient generation.</p>
+      </section>
+
+      <section class="publication-section">
+        <article class="publication-record tilt-card" data-reveal>
+          <div class="record-index">PAPER 001</div>
+          <div class="record-main">
+            <div class="paper-venue">CVPR 2026 Findings</div>
+            <h2>Video2LoRA: Unified Semantic-Controlled Video Generation via Per-Reference-Video LoRA</h2>
+            <p>A transformer HyperNetwork predicts lightweight semantic LoRA adapters from each reference video for unified controllable video generation.</p>
+            <div class="paper-meta-grid" aria-label="Video2LoRA highlights">
+              <span><strong>&lt;50KB</strong> per semantic condition</span>
+              <span><strong>&lt;150MB</strong> final model footprint</span>
+              <span><strong>Zero-shot</strong> unseen semantic controls</span>
+            </div>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2603.08210">Paper</a>
+              <a href="/projects/video2lora/">Project Page</a>
+              <a href="https://github.com/BerserkerVV/Video2LoRA">Code</a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell">
+        <p>Publications</p>
+        <p class="mono">berserkervv.github.io/publications/</p>
+      </div>
+    </footer>
+  </body>
+</html>

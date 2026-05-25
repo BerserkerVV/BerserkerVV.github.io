@@ -7,7 +7,7 @@
     <meta name="description" content="Zexi Wu is a computer vision researcher working on generative video models, semantic control, LoRA adaptation, and world models.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..800,25&family=JetBrains+Mono:wght@400;600&family=Sora:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..800,25&family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@500;700&family=Press+Start+2P&family=Sora:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
     <script src="/app.js" defer></script>
   </head>
@@ -20,142 +20,124 @@
           <span>Zexi Wu</span>
         </a>
         <nav class="site-nav">
-          <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
-          <a href="#experience">Experience</a>
+          <a aria-current="page" href="/">Home</a>
+          <a href="/publications/">Publications</a>
+          <a href="/news/">Academic News</a>
+          <a href="/contact/">Contact</a>
         </nav>
       </div>
     </header>
 
     <main class="page-shell">
-      <section class="hero">
+      <section class="hero home-hero">
         <div class="hero-grid">
           <div class="hero-copy tilt-card" data-reveal>
-            <div class="eyebrow">University of Macau · Generative Video Research</div>
+            <div class="pixel-label">PLAYER 01 / RESEARCH PILOT</div>
             <h1>Zexi Wu</h1>
-            <p>I build generative video systems that can follow semantic references, adapt efficiently, and reason about motion in the world. My current work focuses on semantic-controlled video generation, LoRA personalization, and world-facing AI systems.</p>
-            <div class="hero-console" aria-label="Research signal console">
-              <div class="console-row">
-                <span class="status-dot"></span>
-                <span class="mono">signal://</span>
-                <strong id="signal-type">semantic control</strong>
+            <p>I build generative video systems that follow semantic references, adapt efficiently, and reason about motion in the world.</p>
+            <div class="terminal-window" aria-label="Research console">
+              <div class="terminal-bar">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
-              <div class="console-row">
-                <span class="mono">mode</span>
-                <strong>video diffusion + efficient adaptation</strong>
+              <div class="terminal-lines">
+                <p><span class="prompt">$</span> boot profile --field computer-vision</p>
+                <p><span class="prompt">$</span> load modules semantic-control lora-adaptation world-models</p>
+                <p><span class="prompt">$</span> status <strong id="signal-type">semantic control</strong></p>
               </div>
             </div>
             <div class="hero-actions">
-              <a class="button-primary" href="/uploads/resume.pdf">Download CV</a>
-              <a class="button-secondary" href="mailto:wuy095202@gmail.com">Email</a>
-              <a class="button-secondary" href="#research">Research</a>
+              <a class="button-primary" href="/publications/">Publications</a>
+              <a class="button-secondary" href="/uploads/resume.pdf">Download CV</a>
+              <a class="button-secondary" href="/contact/">Contact</a>
             </div>
           </div>
-          <aside class="hero-side tilt-card" data-reveal>
-            <img src="/assets/avatar.png" alt="Portrait of Zexi Wu">
-            <div class="meta-list">
-              <div class="meta-item">
-                <strong>Research Themes</strong>
-                Generative AI, computer vision, video generation, world models.
+
+          <aside class="robot-panel tilt-card" data-reveal>
+            <div class="robot-screen" aria-label="Robot avatar display">
+              <div class="robot-antenna"></div>
+              <div class="robot-head">
+                <span class="robot-eye"></span>
+                <span class="robot-eye"></span>
+                <span class="robot-mouth"></span>
               </div>
-              <div class="meta-item">
-                <strong>Affiliation</strong>
-                Master’s student in Computer Science at the University of Macau, advised by Prof. Jianbing Shen.
+              <div class="robot-body">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
-              <div class="meta-item">
-                <strong>Links</strong>
-                <div class="inline-links">
-                  <a href="https://github.com/BerserkerVV/">GitHub</a>
-                  <a href="https://scholar.google.com/citations?user=XBskesMAAAAJ&hl=zh-CN">Scholar</a>
-                  <a href="https://orcid.org/0009-0009-8160-0553">ORCID</a>
-                </div>
-              </div>
+            </div>
+            <div class="system-card">
+              <span class="mono">AFFILIATION</span>
+              <strong>University of Macau</strong>
+              <p>Master's student in Computer Science, advised by Prof. Jianbing Shen.</p>
+            </div>
+            <div class="gamepad-row" aria-hidden="true">
+              <span class="dpad">+</span>
+              <span class="pixel-dot"></span>
+              <span class="pixel-dot"></span>
+              <span class="pixel-dot"></span>
             </div>
           </aside>
         </div>
       </section>
 
-      <section id="research" class="research-section">
+      <section class="portal-section">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Research Signal</div>
-            <h2>What I work on</h2>
+            <div class="eyebrow">Main Menu</div>
+            <h2>Choose a station</h2>
           </div>
-          <p>Building controllable video models that stay semantically aligned, lightweight, and useful outside narrow single-condition setups.</p>
+          <p>The site is split into separate pages so research, publications, news, and contact information do not collapse into one long page.</p>
+        </div>
+        <div class="portal-grid">
+          <a class="portal-card portal-research tilt-card" data-reveal href="#research-console">
+            <span class="pixel-label">STAGE 01</span>
+            <h3>Research Console</h3>
+            <p>Generative video, semantic control, efficient adaptation, and world-facing AI systems.</p>
+          </a>
+          <a class="portal-card portal-pubs tilt-card" data-reveal href="/publications/">
+            <span class="pixel-label">STAGE 02</span>
+            <h3>Publications</h3>
+            <p>Selected papers and project links, including Video2LoRA as a publication entry.</p>
+          </a>
+          <a class="portal-card portal-news tilt-card" data-reveal href="/news/">
+            <span class="pixel-label">STAGE 03</span>
+            <h3>Academic News</h3>
+            <p>Updates, milestones, research activity, and academic timeline entries.</p>
+          </a>
+          <a class="portal-card portal-contact tilt-card" data-reveal href="/contact/">
+            <span class="pixel-label">STAGE 04</span>
+            <h3>Contact</h3>
+            <p>Email, GitHub, Scholar, ORCID, and CV links in one signal panel.</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="research-console" class="research-section">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Research Console</div>
+            <h2>Active modules</h2>
+          </div>
+          <p>A compact overview. Full papers and project details live on their own pages.</p>
         </div>
         <div class="signal-grid">
           <article class="signal-card tilt-card" data-reveal>
             <div class="index">01</div>
             <h3>Semantic-Controlled Generation</h3>
-            <p>Turning reference motion, style, camera cues, and visual effects into controllable generation signals for video diffusion systems.</p>
+            <p>Turning reference motion, style, camera cues, and visual effects into controllable generation signals.</p>
           </article>
           <article class="signal-card tilt-card" data-reveal>
             <div class="index">02</div>
             <h3>Efficient Adaptation</h3>
-            <p>Exploring LoRA, hypernetworks, and compact parameterizations that make personalization lightweight enough to deploy.</p>
+            <p>Exploring LoRA, hypernetworks, and compact parameterizations for lightweight personalization.</p>
           </article>
           <article class="signal-card tilt-card" data-reveal>
             <div class="index">03</div>
             <h3>World Understanding</h3>
-            <p>Pushing toward AI systems that understand dynamic scenes, temporal consistency, and high-level intent instead of isolated frames.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="publications" class="publication-section">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Publications</div>
-            <h2>Selected work</h2>
-          </div>
-          <p>Peer-reviewed and preprint work. The project page lives inside this publication entry, instead of being a parallel homepage category.</p>
-        </div>
-        <article class="featured-paper tilt-card" data-reveal>
-          <div class="paper-copy">
-            <div class="paper-venue">CVPR 2026 Findings</div>
-            <h3>Video2LoRA: Unified Semantic-Controlled Video Generation via Per-Reference-Video LoRA</h3>
-            <p>A transformer HyperNetwork predicts a dedicated semantic LoRA from a reference video, enabling zero-shot control without per-condition fine-tuning.</p>
-            <div class="paper-meta-grid" aria-label="Video2LoRA highlights">
-              <span><strong>&lt;50KB</strong> per semantic condition</span>
-              <span><strong>&lt;150MB</strong> final model footprint</span>
-              <span><strong>Zero-shot</strong> unseen semantic controls</span>
-            </div>
-            <div class="project-actions">
-              <a class="button-primary" href="/projects/video2lora/">Open project page</a>
-              <a class="button-secondary" href="https://arxiv.org/abs/2603.08210">Paper</a>
-              <a class="button-secondary" href="https://github.com/BerserkerVV/Video2LoRA">Code</a>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section id="experience" class="experience-section">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Experience</div>
-            <h2>Training and background</h2>
-          </div>
-        </div>
-        <div class="experience-grid">
-          <article class="timeline-item tilt-card" data-reveal>
-            <div class="timeline-meta">2026 – 2028</div>
-            <h3>University of Macau</h3>
-            <p>Master in Computer Science.</p>
-          </article>
-          <article class="timeline-item tilt-card" data-reveal>
-            <div class="timeline-meta">2025 – 2026</div>
-            <h3>LibLibAI · Research Intern</h3>
-            <p>Working on video generation systems and controllable generative modeling.</p>
-          </article>
-          <article class="timeline-item tilt-card" data-reveal>
-            <div class="timeline-meta">2023 – 2025</div>
-            <h3>Dalian University of Technology</h3>
-            <p>Second BS in Computer Science.</p>
-          </article>
-          <article class="timeline-item tilt-card" data-reveal>
-            <div class="timeline-meta">2019 – 2023</div>
-            <h3>Dalian University of Technology</h3>
-            <p>BS in Food Science and Engineering.</p>
+            <p>Working toward models that understand dynamic scenes, temporal consistency, and high-level intent.</p>
           </article>
         </div>
       </section>
@@ -163,7 +145,7 @@
 
     <footer class="site-footer">
       <div class="page-shell">
-        <p>© 2026 Zexi Wu</p>
+        <p>2026 Zexi Wu</p>
         <p class="mono">berserkervv.github.io</p>
       </div>
     </footer>
