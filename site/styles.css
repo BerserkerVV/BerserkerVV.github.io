@@ -425,8 +425,52 @@ p {
   align-content: start;
 }
 
+.portrait-console {
+  display: grid;
+  grid-template-columns: minmax(116px, 0.7fr) minmax(0, 1fr);
+  gap: 14px;
+  align-items: stretch;
+  padding: 12px;
+  border: 1px solid color-mix(in srgb, var(--accent) 38%, transparent);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent) 12%, transparent), transparent 56%),
+    rgba(0, 0, 0, 0.2);
+}
+
+.portrait-console img {
+  width: 100%;
+  height: 100%;
+  min-height: 176px;
+  object-fit: cover;
+  border: 2px solid color-mix(in srgb, var(--accent) 50%, transparent);
+  border-radius: 8px;
+  filter: saturate(1.08) contrast(1.04);
+}
+
+.portrait-hud {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.portrait-hud strong {
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.portrait-hud p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .robot-screen {
-  min-height: 290px;
+  min-height: 230px;
   display: grid;
   place-items: center;
   border: 1px solid color-mix(in srgb, var(--accent) 34%, transparent);
@@ -1014,7 +1058,8 @@ pre.mono {
   .signal-grid,
   .metric-grid,
   .contact-links,
-  .news-item {
+  .news-item,
+  .portrait-console {
     grid-template-columns: 1fr;
   }
 
