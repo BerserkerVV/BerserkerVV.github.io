@@ -10,7 +10,7 @@ if (canvas) {
   };
 
   const scene = new THREE.Scene();
-  scene.fog = new THREE.FogExp2(0x07111f, 0.035);
+  scene.fog = new THREE.FogExp2(0x07111f, 0.026);
 
   const renderer = new THREE.WebGLRenderer({
     canvas,
@@ -24,11 +24,11 @@ if (canvas) {
   renderer.toneMappingExposure = 1.12;
 
   const camera = new THREE.PerspectiveCamera(48, 1, 0.1, 180);
-  camera.position.set(0, 9.4, 19);
+  camera.position.set(0, 11.2, 24);
   camera.lookAt(0, 0, 0);
 
   const pointer = new THREE.Vector2();
-  const targetCamera = new THREE.Vector3(0, 9.4, 19);
+  const targetCamera = new THREE.Vector3(0, 11.2, 24);
   const raycaster = new THREE.Raycaster();
   const clickable = [];
 
@@ -190,8 +190,8 @@ if (canvas) {
       map: makeLabelTexture(name, subtitle, `#${color.toString(16).padStart(6, "0")}`),
       transparent: true
     }));
-    label.position.set(0, scale * 2.65, 0);
-    label.scale.set(3.6, 1.8, 1);
+    label.position.set(0, scale * 2.25, 0);
+    label.scale.set(2.75, 1.38, 1);
     label.userData.href = href;
     clickable.push(label);
     group.add(label);
@@ -230,28 +230,31 @@ if (canvas) {
     })
   ];
 
-  const avatarTexture = new THREE.TextureLoader().load("/assets/avatar.png");
-  avatarTexture.colorSpace = THREE.SRGBColorSpace;
-  const avatar = new THREE.Mesh(
-    new THREE.PlaneGeometry(2.2, 2.2),
-    new THREE.MeshBasicMaterial({
-      map: avatarTexture,
-      transparent: true
-    })
-  );
-  avatar.position.set(0, 3.2, 0.1);
-  world.add(avatar);
-
-  const avatarFrame = new THREE.Mesh(
-    new THREE.TorusGeometry(1.62, 0.025, 10, 96),
+  const playerGate = new THREE.Mesh(
+    new THREE.TorusGeometry(1.7, 0.035, 10, 96),
     new THREE.MeshBasicMaterial({
       color: 0x45d7ff,
       transparent: true,
-      opacity: 0.78
+      opacity: 0.72
     })
   );
-  avatarFrame.position.set(0, 3.2, 0);
-  world.add(avatarFrame);
+  playerGate.position.set(0, 2.85, 0);
+  world.add(playerGate);
+
+  const gateCore = new THREE.Mesh(
+    new THREE.IcosahedronGeometry(0.72, 1),
+    new THREE.MeshStandardMaterial({
+      color: 0x45d7ff,
+      roughness: 0.24,
+      metalness: 0.58,
+      emissive: 0x45d7ff,
+      emissiveIntensity: 0.34,
+      transparent: true,
+      opacity: 0.82
+    })
+  );
+  gateCore.position.set(0, 2.85, 0);
+  world.add(gateCore);
 
   const beatStage = new THREE.Group();
   beatStage.position.set(0, 0.04, -0.15);
@@ -349,8 +352,8 @@ if (canvas) {
   window.addEventListener("pointermove", (event) => {
     pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
     pointer.y = -(event.clientY / window.innerHeight) * 2 + 1;
-    targetCamera.x = pointer.x * 2.2;
-    targetCamera.z = 19 + pointer.y * 1.5;
+    targetCamera.x = pointer.x * 2;
+    targetCamera.z = 24 + pointer.y * 1.6;
   }, { passive: true });
 
   window.addEventListener("click", (event) => {
@@ -373,9 +376,10 @@ if (canvas) {
     world.rotation.y = Math.sin(elapsed * 0.12) * 0.08;
     grid.material.opacity = 0.22 + Math.sin(elapsed * 1.2) * 0.035;
     stars.rotation.y = elapsed * 0.018;
-    avatar.lookAt(camera.position);
-    avatarFrame.lookAt(camera.position);
-    avatarFrame.rotation.z += elapsed * 0.0006;
+    playerGate.lookAt(camera.position);
+    playerGate.rotation.z += elapsed * 0.001;
+    gateCore.rotation.x = elapsed * 0.42;
+    gateCore.rotation.y = elapsed * 0.58;
 
     islands.forEach((island) => {
       island.position.y = Math.sin(elapsed * 0.9 + island.userData.phase) * 0.12;

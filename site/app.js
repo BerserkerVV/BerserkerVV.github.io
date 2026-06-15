@@ -151,15 +151,48 @@
 
   const cardTrack = document.querySelector(".world-dock");
   if (cardTrack) {
+    const updateFocusedCard = () => {
+      const cards = [...cardTrack.querySelectorAll("a")];
+      const trackRect = cardTrack.getBoundingClientRect();
+      const trackCenter = trackRect.left + trackRect.width * 0.5;
+      let closestCard = cards[0];
+      let closestDistance = Number.POSITIVE_INFINITY;
+
+      cards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        const distance = Math.abs(rect.left + rect.width * 0.5 - trackCenter);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestCard = card;
+        }
+      });
+
+      cards.forEach((card) => card.classList.toggle("is-focused", card === closestCard));
+    };
+
     let dragStartX = 0;
     let dragStartScroll = 0;
     let dragging = false;
     let moved = false;
+    let focusFrame = 0;
+
+    const scheduleFocusedCard = () => {
+      if (focusFrame) return;
+      focusFrame = window.requestAnimationFrame(() => {
+        updateFocusedCard();
+        focusFrame = 0;
+      });
+    };
+
+    updateFocusedCard();
+    window.addEventListener("resize", scheduleFocusedCard);
+    cardTrack.addEventListener("scroll", scheduleFocusedCard, { passive: true });
 
     cardTrack.addEventListener("wheel", (event) => {
       if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
       event.preventDefault();
       cardTrack.scrollBy({ left: event.deltaY, behavior: "auto" });
+      scheduleFocusedCard();
     }, { passive: false });
 
     cardTrack.addEventListener("pointerdown", (event) => {
@@ -176,6 +209,7 @@
       const delta = event.clientX - dragStartX;
       if (Math.abs(delta) > 5) moved = true;
       cardTrack.scrollLeft = dragStartScroll - delta;
+      scheduleFocusedCard();
     });
 
     const endDrag = (event) => {
