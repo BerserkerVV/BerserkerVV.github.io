@@ -710,6 +710,11 @@ section {
   border-color: color-mix(in srgb, var(--gold) 32%, transparent);
 }
 
+.publication-section {
+  display: grid;
+  gap: 18px;
+}
+
 .publication-record h2,
 .featured-paper h3 {
   max-width: 920px;
@@ -1140,9 +1145,9 @@ body[data-page="home"] .site-footer {
   min-height: 100vh;
   display: grid;
   grid-template-columns: minmax(280px, 0.82fr) minmax(260px, 0.42fr);
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto 1fr auto;
   gap: 20px;
-  align-items: end;
+  align-items: start;
   padding-top: 112px;
   padding-bottom: 24px;
   pointer-events: none;
@@ -1150,26 +1155,27 @@ body[data-page="home"] .site-footer {
 
 .world-title-panel,
 .world-id-panel,
+.world-card-carousel,
 .world-dock {
   pointer-events: auto;
 }
 
 .world-title-panel {
-  max-width: 720px;
-  padding: 24px;
+  max-width: 380px;
+  padding: 18px;
   border: 1px solid color-mix(in srgb, var(--cyan) 28%, transparent);
   border-radius: 8px;
   background:
     linear-gradient(135deg, rgba(69, 215, 255, 0.12), transparent 55%),
-    rgba(5, 9, 18, 0.58);
+    rgba(5, 9, 18, 0.38);
   backdrop-filter: blur(18px);
   box-shadow: 0 24px 90px rgba(0, 0, 0, 0.34);
 }
 
 .world-title-panel h1 {
-  margin: 16px 0 12px;
+  margin: 12px 0;
   font-family: var(--font-display);
-  font-size: 76px;
+  font-size: 44px;
   line-height: 0.94;
 }
 
@@ -1181,7 +1187,7 @@ body[data-page="home"] .site-footer {
 }
 
 .beat-meter {
-  height: 48px;
+  height: 34px;
   display: flex;
   align-items: end;
   gap: 7px;
@@ -1189,7 +1195,7 @@ body[data-page="home"] .site-footer {
 }
 
 .beat-meter span {
-  width: 12px;
+  width: 10px;
   border: 1px solid color-mix(in srgb, var(--cyan) 48%, transparent);
   border-radius: 4px 4px 0 0;
   background: linear-gradient(180deg, var(--rose), var(--cyan));
@@ -1197,31 +1203,31 @@ body[data-page="home"] .site-footer {
 }
 
 .beat-meter span:nth-child(1) {
-  height: 24px;
+  height: 18px;
 }
 
 .beat-meter span:nth-child(2) {
-  height: 40px;
+  height: 30px;
   animation-delay: 80ms;
 }
 
 .beat-meter span:nth-child(3) {
-  height: 30px;
+  height: 22px;
   animation-delay: 150ms;
 }
 
 .beat-meter span:nth-child(4) {
-  height: 46px;
+  height: 34px;
   animation-delay: 220ms;
 }
 
 .beat-meter span:nth-child(5) {
-  height: 28px;
+  height: 20px;
   animation-delay: 300ms;
 }
 
 .beat-meter span:nth-child(6) {
-  height: 38px;
+  height: 28px;
   animation-delay: 380ms;
 }
 
@@ -1271,19 +1277,53 @@ body[data-page="home"] .site-footer {
   font-size: 13px;
 }
 
-.world-dock {
+.world-card-carousel {
   grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  align-self: end;
+  pointer-events: auto;
+}
+
+.world-card-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.world-card-controls button {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text);
+  background: rgba(5, 9, 18, 0.58);
+  font: inherit;
+  cursor: pointer;
+}
+
+.world-card-controls button:hover {
+  border-color: color-mix(in srgb, var(--cyan) 45%, transparent);
+  color: var(--cyan);
+}
+
+.world-dock {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: var(--cyan) rgba(255, 255, 255, 0.08);
+  padding-bottom: 8px;
 }
 
 .world-dock a {
-  min-height: 92px;
+  flex: 0 0 min(360px, 82vw);
+  min-height: 126px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 14px;
+  scroll-snap-align: start;
+  padding: 16px;
   border: 1px solid var(--line);
   border-radius: 8px;
   color: var(--text);
@@ -1303,6 +1343,16 @@ body[data-page="home"] .site-footer {
   color: var(--accent);
   font-family: var(--font-pixel);
   font-size: 10px;
+}
+
+.world-dock strong {
+  display: block;
+  font-size: 20px;
+}
+
+.world-dock small {
+  color: var(--muted);
+  font-family: var(--font-mono);
 }
 
 @media (max-width: 980px) {
@@ -1328,8 +1378,8 @@ body[data-page="home"] .site-footer {
     justify-self: start;
   }
 
-  .world-dock {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .world-card-controls {
+    justify-content: flex-start;
   }
 }
 
@@ -1360,8 +1410,7 @@ body[data-page="home"] .site-footer {
     font-size: 38px;
   }
 
-  .world-id-panel,
-  .world-dock {
+  .world-id-panel {
     grid-template-columns: 1fr;
   }
 

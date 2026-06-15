@@ -148,4 +148,15 @@
       }
     });
   });
+
+  const cardTrack = document.querySelector(".world-dock");
+  document.querySelectorAll("[data-slide-cards]").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!cardTrack) return;
+      const direction = Number(button.dataset.slideCards) || 1;
+      const card = cardTrack.querySelector("a");
+      const amount = card ? card.getBoundingClientRect().width + 14 : 360;
+      cardTrack.scrollBy({ left: direction * amount, behavior: "smooth" });
+    });
+  });
 })();

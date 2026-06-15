@@ -6,8 +6,7 @@ if (canvas) {
   const links = {
     publications: "/publications/",
     news: "/news/",
-    contact: "/contact/",
-    video2lora: "/projects/video2lora/"
+    contact: "/contact/"
   };
 
   const scene = new THREE.Scene();
@@ -228,15 +227,6 @@ if (canvas) {
       position: [6.3, 3.5],
       scale: 1.18,
       rotation: 0.7
-    }),
-    makeIsland({
-      name: "GATE",
-      subtitle: "video2lora",
-      href: links.video2lora,
-      color: 0x45d7ff,
-      position: [-2, 5.4],
-      scale: 1.28,
-      rotation: -0.15
     })
   ];
 
