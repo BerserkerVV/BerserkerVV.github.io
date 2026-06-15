@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..800,25&family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@500;700&family=Press+Start+2P&family=Sora:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
     <script src="/app.js" defer></script>
+    <script type="module" src="/world.js"></script>
   </head>
   <body data-page="home">
     <div class="site-glow" aria-hidden="true"></div>
@@ -28,124 +29,58 @@
       </div>
     </header>
 
-    <main class="page-shell">
-      <section class="hero home-hero">
-        <div class="hero-grid">
-          <div class="hero-copy tilt-card" data-reveal>
-            <div class="pixel-label">PLAYER 01 / RESEARCH PILOT</div>
+    <main class="world-main">
+      <section class="world-stage" aria-label="Zexi Wu 3D research world">
+        <canvas id="world-canvas" aria-hidden="true"></canvas>
+        <div class="world-vignette" aria-hidden="true"></div>
+
+        <div class="world-hud page-shell">
+          <div class="world-title-panel" data-reveal>
+            <div class="pixel-label">OPEN WORLD / ARENA BEAT MAP</div>
             <h1>Zexi Wu</h1>
-            <p>I build generative video systems that follow semantic references, adapt efficiently, and reason about motion in the world.</p>
-            <div class="terminal-window" aria-label="Research console">
-              <div class="terminal-bar">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <div class="terminal-lines">
-                <p><span class="prompt">$</span> boot profile --field computer-vision</p>
-                <p><span class="prompt">$</span> load modules semantic-control lora-adaptation world-models</p>
-                <p><span class="prompt">$</span> status <strong id="signal-type">semantic control</strong></p>
-              </div>
+            <p>A research world built like a neon game map: arena gates, voxel biomes, beat pads, and portals into publications, projects, news, and contact.</p>
+            <div class="beat-meter" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-            <div class="hero-actions">
+            <div class="world-actions">
               <a class="button-primary" href="/publications/">Publications</a>
-              <a class="button-secondary" href="/uploads/resume.pdf">Download CV</a>
-              <a class="button-secondary" href="/contact/">Contact</a>
+              <a class="button-secondary" href="/projects/video2lora/">Video2LoRA</a>
+              <a class="button-secondary" href="/uploads/resume.pdf">CV</a>
             </div>
           </div>
 
-          <aside class="robot-panel tilt-card" data-reveal>
-            <div class="portrait-console" aria-label="Portrait of Zexi Wu">
-              <img src="/assets/avatar.png" alt="Portrait of Zexi Wu">
-              <div class="portrait-hud">
-                <span class="pixel-label">IDENTITY LOCK</span>
-                <strong>Zexi Wu</strong>
-                <p>Generative video research / semantic control</p>
-              </div>
-            </div>
-            <div class="robot-screen" aria-label="Robot interface display">
-              <div class="robot-antenna"></div>
-              <div class="robot-head">
-                <span class="robot-eye"></span>
-                <span class="robot-eye"></span>
-                <span class="robot-mouth"></span>
-              </div>
-              <div class="robot-body">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-            <div class="system-card">
-              <span class="mono">AFFILIATION</span>
-              <strong>University of Macau</strong>
-              <p>Master's student in Computer Science, advised by Prof. Jianbing Shen.</p>
-            </div>
-            <div class="gamepad-row" aria-hidden="true">
-              <span class="dpad">+</span>
-              <span class="pixel-dot"></span>
-              <span class="pixel-dot"></span>
-              <span class="pixel-dot"></span>
+          <aside class="world-id-panel" data-reveal>
+            <img src="/assets/avatar.png" alt="Portrait of Zexi Wu">
+            <div>
+              <span class="mono">UNIVERSITY OF MACAU</span>
+              <strong>Generative video arena</strong>
+              <p>Semantic control / LoRA builds / world-model quests</p>
             </div>
           </aside>
-        </div>
-      </section>
 
-      <section class="portal-section">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Main Menu</div>
-            <h2>Choose a station</h2>
-          </div>
-        </div>
-        <div class="portal-grid">
-          <a class="portal-card portal-research tilt-card" data-reveal href="#research-console">
-            <span class="pixel-label">STAGE 01</span>
-            <h3>Research Console</h3>
-            <p>Generative video, semantic control, efficient adaptation, and world-facing AI systems.</p>
-          </a>
-          <a class="portal-card portal-pubs tilt-card" data-reveal href="/publications/">
-            <span class="pixel-label">STAGE 02</span>
-            <h3>Publications</h3>
-            <p>Selected papers and project links, including Video2LoRA as a publication entry.</p>
-          </a>
-          <a class="portal-card portal-news tilt-card" data-reveal href="/news/">
-            <span class="pixel-label">STAGE 03</span>
-            <h3>Academic News</h3>
-            <p>Updates, milestones, research activity, and academic timeline entries.</p>
-          </a>
-          <a class="portal-card portal-contact tilt-card" data-reveal href="/contact/">
-            <span class="pixel-label">STAGE 04</span>
-            <h3>Contact</h3>
-            <p>Email, GitHub, Scholar, ORCID, and CV links in one signal panel.</p>
-          </a>
-        </div>
-      </section>
-
-      <section id="research-console" class="research-section">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Research Console</div>
-            <h2>Active modules</h2>
-          </div>
-          <p>A compact overview. Full papers and project details live on their own pages.</p>
-        </div>
-        <div class="signal-grid">
-          <article class="signal-card tilt-card" data-reveal>
-            <div class="index">01</div>
-            <h3>Semantic-Controlled Generation</h3>
-            <p>Turning reference motion, style, camera cues, and visual effects into controllable generation signals.</p>
-          </article>
-          <article class="signal-card tilt-card" data-reveal>
-            <div class="index">02</div>
-            <h3>Efficient Adaptation</h3>
-            <p>Exploring LoRA, hypernetworks, and compact parameterizations for lightweight personalization.</p>
-          </article>
-          <article class="signal-card tilt-card" data-reveal>
-            <div class="index">03</div>
-            <h3>World Understanding</h3>
-            <p>Working toward models that understand dynamic scenes, temporal consistency, and high-level intent.</p>
-          </article>
+          <nav class="world-dock" aria-label="World stations">
+            <a href="/publications/">
+              <span>01</span>
+              Arena Archive
+            </a>
+            <a href="/news/">
+              <span>02</span>
+              Quest Log
+            </a>
+            <a href="/contact/">
+              <span>03</span>
+              Signal Booth
+            </a>
+            <a href="/projects/video2lora/">
+              <span>04</span>
+              Video2LoRA Gate
+            </a>
+          </nav>
         </div>
       </section>
     </main>
