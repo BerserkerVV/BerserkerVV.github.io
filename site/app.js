@@ -150,6 +150,53 @@
   });
 
   const cardTrack = document.querySelector(".world-dock");
+  if (cardTrack) {
+    let dragStartX = 0;
+    let dragStartScroll = 0;
+    let dragging = false;
+    let moved = false;
+
+    cardTrack.addEventListener("wheel", (event) => {
+      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+      event.preventDefault();
+      cardTrack.scrollBy({ left: event.deltaY, behavior: "auto" });
+    }, { passive: false });
+
+    cardTrack.addEventListener("pointerdown", (event) => {
+      dragging = true;
+      moved = false;
+      dragStartX = event.clientX;
+      dragStartScroll = cardTrack.scrollLeft;
+      cardTrack.classList.add("is-dragging");
+      cardTrack.setPointerCapture(event.pointerId);
+    });
+
+    cardTrack.addEventListener("pointermove", (event) => {
+      if (!dragging) return;
+      const delta = event.clientX - dragStartX;
+      if (Math.abs(delta) > 5) moved = true;
+      cardTrack.scrollLeft = dragStartScroll - delta;
+    });
+
+    const endDrag = (event) => {
+      if (!dragging) return;
+      dragging = false;
+      cardTrack.classList.remove("is-dragging");
+      if (cardTrack.hasPointerCapture(event.pointerId)) {
+        cardTrack.releasePointerCapture(event.pointerId);
+      }
+    };
+
+    cardTrack.addEventListener("pointerup", endDrag);
+    cardTrack.addEventListener("pointercancel", endDrag);
+    cardTrack.addEventListener("click", (event) => {
+      if (!moved) return;
+      event.preventDefault();
+      event.stopPropagation();
+      moved = false;
+    }, true);
+  }
+
   document.querySelectorAll("[data-slide-cards]").forEach((button) => {
     button.addEventListener("click", () => {
       if (!cardTrack) return;

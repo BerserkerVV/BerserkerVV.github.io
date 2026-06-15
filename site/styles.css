@@ -1314,10 +1314,17 @@ body[data-page="home"] .site-footer {
   scroll-snap-type: x mandatory;
   scrollbar-color: var(--cyan) rgba(255, 255, 255, 0.08);
   padding-bottom: 8px;
+  cursor: grab;
+  user-select: none;
+}
+
+.world-dock.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
 }
 
 .world-dock a {
-  flex: 0 0 min(360px, 82vw);
+  flex: 0 0 min(460px, 86vw);
   min-height: 126px;
   display: flex;
   flex-direction: column;
